@@ -1,6 +1,7 @@
 import org.swixml.SwingEngine;
 
 import javax.swing.*;
+import javax.swing.plaf.synth.SynthLookAndFeel;
 import java.awt.event.ActionEvent;
 import java.text.DecimalFormat;
 import java.util.Arrays;
@@ -74,6 +75,9 @@ public class MyCalculator extends SwingEngine {
         btnTotal.addActionListener(e -> {
             try {
                 currValue = Integer.parseInt(textField.getText());
+                if(operation == null)
+                    return;
+
                 switch (operation) {
                     case "+":
                         resultString = String.valueOf(prevValue + currValue);
@@ -96,10 +100,16 @@ public class MyCalculator extends SwingEngine {
                 System.out.println(Arrays.toString(ex.getStackTrace()));
             }
         });
+
+        SynthLookAndFeel synthLookAndFeel = new SynthLookAndFeel();
+        synthLookAndFeel.load(MyCalculator.class.getResourceAsStream("styles.xml"), MyCalculator.class);
+        UIManager.setLookAndFeel(synthLookAndFeel);
     }
 
     public static void main(String[] args) throws Exception {
         MyCalculator myCalculator = new MyCalculator();
         myCalculator.getRootComponent().setVisible(true);
+
+
     }
 }

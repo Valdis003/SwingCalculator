@@ -1,0 +1,16 @@
+<synth>
+    <style id="buttonStyle">
+        <property key="Button.textShiftOffset" type="integer" value="1"/>
+        <insets top="10" left="10" right="10" bottom="10"/>
+
+        <state>
+            <color value="#333" type="BACKGROUND"/>
+        </state>
+        <state value="PRESSED">
+            <color value="red" type="BACKGROUND"/>
+            <insets top="15" left="20" right="20" bottom="15"/>
+        </state>
+    </style>
+
+    <bind style="buttonStyle" type="name" key="btnTotal"/>
+</synth>
