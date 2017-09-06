@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<frame
+    size="420,250" title="Calculator" LocationRelativeTo="null" DefaultCloseOperation="3" layout="BorderLayout">
+
+    <panel constraints="BorderLayout.NORTH" layout="BorderLayout">
+        <formattedtextfield horizontalalignment="RIGHT" id="textField" font="Comic Sans MS-BOLD-30" text=""/>
+    </panel>
+
+    <panel>
+        <layout type="FormLayout" columns="100px, 100px, 100px, 100px" rows="pref, pref, pref, pref, pref"/>
+            <button constraints="1,1" id="btn1" action="numberClick" text="1"/>
+            <button constraints="2,1" id="btn2" action="numberClick" text="2"/>
+            <button constraints="3,1" id="btn3" action="numberClick" text="3"/>
+            <button constraints="4,1" id="btnDiv" action="operationClick" text="/"/>
+
+            <button constraints="1,2" id="btn4" action="numberClick" text="4"/>
+            <button constraints="2,2" id="btn5" action="numberClick" text="5"/>
+            <button constraints="3,2" id="btn6" action="numberClick" text="6"/>
+            <button constraints="4,2" id="btnMultiplication" action="operationClick" text="*" accelerator="*"/>
+
+            <button constraints="1,3" id="btn7" action="numberClick" text="7"/>
+            <button constraints="2,3" id="btn8" action="numberClick" text="8"/>
+            <button constraints="3,3" id="btn9" action="numberClick" text="9"/>
+            <button constraints="4,3" id="btnSubtract" action="operationClick" text="-"/>
+
+            <button constraints="1,4" id="btn0" action="numberClick" text="0"/>
+            <button constraints="2,4" id="btnSeparator" action="operationClick" text="."/>
+            <button constraints="3,4" id="btnTotal" text="="/>
+            <button constraints="4,4" id="btnAddition" action="operationClick" text="+"/>
+
+            <button  constraints="2,5" id="btnExit" action="exit" text="close"/>
+            <button  constraints="3,5" id="btnClear" action="clear" text="clear"/>
+    </panel>
+</frame>
